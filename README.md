@@ -1,9 +1,9 @@
 # AppRoomProduto: Cadastro de Produtos com Room SQLite
 
-**Aluno(a):** [preencha seu nome completo]  
-**RA:** [preencha seu RA]  
+**Aluno(a):** Leonardo do Monte Serrat de Souza / Gabriela Sonvezzo Feltrin 
+**RA:** 237097 / 236275
 **Disciplina:** Programação para Dispositivos Móveis  
-**Professor(a):** [preencha o nome do professor]
+**Professor(a):** Alessandro
 
 ## Sobre o projeto
 
@@ -43,12 +43,12 @@ Os componentes têm IDs descritivos para facilitar a leitura e a ligação com o
 
 Adicione capturas reais do aplicativo em execução à pasta `docs/prints/`. Não deixe imagens fictícias no lugar das evidências.
 
-- Tela inicial e cadastro: `docs/prints/tela-inicial.png`
-- Listagem e resumo: `docs/prints/listagem.png`
-- Busca por nome: `docs/prints/busca.png`
-- Atualização de preço: `docs/prints/atualizacao.png`
-- Validação de preço: `docs/prints/validacao-preco.png`
-- Exclusão: `docs/prints/exclusao.png`
+- Tela inicial e cadastro: `docs/prints/p4.png`
+- Listagem e resumo: `docs/prints/p4.png`
+- Busca por nome: `docs/prints/p3.png`
+- Atualização de preço: `docs/prints/p2.png`
+- Validação de preço: `docs/prints/p4.png`
+- Exclusão: `docs/prints/p1.png`
 
 ## Parte A: Complemento prático
 
@@ -66,7 +66,7 @@ binding.editProductQuantity.text.clear()
 binding.editProductName.requestFocus()
 ```
 
-Print: `docs/prints/a1.png` (adicionar captura real).
+
 
 ### A2. Validação de preço
 
@@ -80,7 +80,7 @@ if (preco == null || preco <= 0.0) {
 }
 ```
 
-Print: `docs/prints/validacao-preco.png` (adicionar captura real).
+
 
 ### A3. Lista na tela
 
@@ -92,7 +92,7 @@ binding.textListaProdutos.text = produtos.joinToString("\n\n") { produto ->
 }
 ```
 
-Print: `docs/prints/listagem.png` (adicionar captura real).
+
 
 ### A4. Total do estoque
 
@@ -104,7 +104,7 @@ binding.textResumoEstoque.text =
     "Estoque: ${produtos.size} produto(s) | Valor total: ${currencyFormat.format(totalPreco)}"
 ```
 
-Print: `docs/prints/a4.png` (adicionar captura real).
+
 
 ### A5. Buscar por nome
 
@@ -119,7 +119,7 @@ suspend fun buscarPorNome(nome: String): List<Product>
 atualizarLista(productDao.buscarPorNome("%$texto%"))
 ```
 
-Print: `docs/prints/busca.png` (adicionar captura real).
+
 
 ### A6. Excluir produtos
 
@@ -130,7 +130,7 @@ O botão Excluir todos chama uma função DAO com `DELETE FROM product`.
 suspend fun deleteAll()
 ```
 
-Print: `docs/prints/exclusao.png` (adicionar captura real).
+
 
 ### A7. Atualizar produto
 
@@ -141,7 +141,7 @@ O usuário informa o ID do produto e o novo preço. O aplicativo busca o registr
 suspend fun updateProduct(product: Product)
 ```
 
-Print: `docs/prints/atualizacao.png` (adicionar captura real).
+
 
 ### A8. Novo campo na tabela
 
@@ -159,7 +159,7 @@ abstract class AppDatabase : RoomDatabase()
 
 Neste projeto didático, `fallbackToDestructiveMigration()` permite recriar o banco quando a versão muda, mas os registros antigos podem ser apagados. Em um aplicativo real, deve-se criar uma `Migration` para preservar os dados e preencher o novo campo de forma compatível.
 
-Print: `docs/prints/a8.png` (adicionar captura real).
+
 
 ## Parte B: Questões dissertativas
 
@@ -204,12 +204,3 @@ Uma dificuldade deste projeto foi configurar as dependências do Android e do Ro
 5. Cadastre produtos preenchendo nome, preço e quantidade; a descrição é opcional.
 6. Use os botões para listar, pesquisar, atualizar o preço pelo ID ou excluir todos.
 7. Feche e abra o aplicativo novamente e liste os produtos para verificar a persistência.
-
-## Antes de entregar
-
-- [ ] Preencher nome, RA e professor.
-- [ ] Executar o projeto e corrigir eventuais diferenças de ambiente.
-- [ ] Tirar os prints reais solicitados e salvá-los em `docs/prints/`.
-- [ ] Conferir se todas as imagens aparecem no README.
-- [ ] Criar um repositório **público** no GitHub e enviar os arquivos.
-- [ ] Abrir o link do repositório em uma janela anônima para confirmar o acesso.
