@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.AppRoomProduto" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#3949AB</item>
+        <item name="colorPrimaryVariant">#283593</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#00897B</item>
+    </style>
+</resources>

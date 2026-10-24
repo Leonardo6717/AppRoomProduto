@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/layoutCadastroProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textTituloTela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cadastro de Produtos"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editProductId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID do produto (para atualizar preço)"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome do produto"
+            android:inputType="textCapSentences"
+            android:contentDescription="Campo nome do produto" />
+
+        <EditText
+            android:id="@+id/editProductPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Preço (ex.: 19,90)"
+            android:inputType="numberDecimal"
+            android:contentDescription="Campo preço do produto" />
+
+        <EditText
+            android:id="@+id/editProductDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descrição (opcional)"
+            android:inputType="textCapSentences"
+            android:contentDescription="Campo descrição do produto" />
+
+        <EditText
+            android:id="@+id/editProductQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantidade em estoque"
+            android:inputType="number"
+            android:contentDescription="Campo quantidade em estoque" />
+
+        <Button
+            android:id="@+id/btnInserirProduto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inserir produto" />
+
+        <Button
+            android:id="@+id/btnListarProdutos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Listar todos os produtos" />
+
+        <TextView
+            android:id="@+id/textSubtituloBusca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar produtos por nome"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingTop="12dp" />
+
+        <EditText
+            android:id="@+id/editBuscaNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite parte do nome"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnBuscarProduto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar por nome" />
+
+        <TextView
+            android:id="@+id/textSubtituloAtualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Atualizar preço"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingTop="12dp" />
+
+        <EditText
+            android:id="@+id/editNovoPreco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Novo preço"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/btnAtualizarPreco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Atualizar preço pelo ID" />
+
+        <Button
+            android:id="@+id/btnExcluirTodos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Excluir todos os produtos" />
+
+        <TextView
+            android:id="@+id/textResumoEstoque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estoque: 0 produtos | Valor total: R$ 0,00"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/textListaProdutos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Os produtos cadastrados aparecerão aqui."
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:background="#EEEEEE"
+            android:contentDescription="Lista de produtos cadastrados" />
+
+    </LinearLayout>
+</ScrollView>
